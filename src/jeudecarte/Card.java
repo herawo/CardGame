@@ -22,4 +22,8 @@ public class Card {
     public String toString(){
         return "[Value = " + value + "; Shape = " + shape + " ]"; 
     }
+    
+    public int getRealValue(){
+        return value.getValue();
+    }
 }

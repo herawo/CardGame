@@ -26,4 +26,18 @@ public class Player {
     public Packet getDeck(){
         return this.deck;
     }
+    
+    public Card play(){
+        return deck.getPile().pop();
+    }
+    
+    public void addCard(Card... cards){
+        for(Card c : cards){
+            deck.getPile().add(c);
+        }
+    }
+    
+    public int numberCard(){
+        return deck.numberCard();
+    }
 }

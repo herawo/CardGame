@@ -53,8 +53,33 @@ public class JeuDeCarte {
         LinkedList<LinkedList<Card>> listOfStacks = jeu.split(2);
         p1.setDeck( listOfStacks.get(0));
         p2.setDeck( listOfStacks.get(1));
+        
+        for(int i = 0 ; i <= 20 ; i++){
+            Card c1 = p1.play();
+            Card c2 = p2.play();
+
+            System.out.println("p1 : " + c1);
+            System.out.println("p2 : " + c2);
+            if(c1.getRealValue() < c2.getRealValue()){
+                System.out.println("p2 gagne");
+                p2.addCard(c1,c2);
+            }
+            else if(c1.getRealValue() > c2.getRealValue()){
+                System.out.println("p1 gagne");
+                p1.addCard(c1,c2);
+            }
+            else{
+                System.out.println("égalité");
+                p1.addCard(c1);
+                p2.addCard(c2);
+            }
+        }
+        
         System.out.println(p1.getDeck());
-        System.out.println(p2.getDeck());
+        System.out.println(p2.getDeck()); 
+        System.out.println(p1.numberCard());
+        System.out.println(p2.numberCard());
+            
     }
     
     public static LinkedList<Object> multipleAdd(Object... obj){

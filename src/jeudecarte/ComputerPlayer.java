@@ -9,6 +9,11 @@ package jeudecarte;
  *
  * @author UTILISATEUR
  */
-public class ComputerPlayer {
+public class ComputerPlayer extends Player{
+    
+    public ComputerPlayer(String n) {
+        super(n);
+    }
+    
     
 }

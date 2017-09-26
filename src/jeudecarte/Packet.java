@@ -58,4 +58,8 @@ public class Packet {
         }
         return listOfStacks;
     }
+    
+    public int numberCard(){
+        return stack.size();
+    }
 }
